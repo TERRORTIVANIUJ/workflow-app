@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Change Password</title>
+</head>
+<body>
+
+<style>
+    body {
+		  background: linear-gradient(#00b16a, rgba(0, 0, 0, 0.5), #33b5e5), url(assets/img/banner.jpg) !important;
+		  background-size: cover !important;
+		  backdrop-filter: blur(5px) !important;
+	  }
+  </style>
+
 <?php
 require 'authentication.php'; // admin authentication check 
 
@@ -23,7 +41,7 @@ include("include/login_header.php");
 		<div class="well" style="position:relative;top:20vh;">
 			<form class="form-horizontal form-custom-login" action="" method="POST">
 			  <div class="form-heading" style="background: orange;">
-			    <h2 class="text-center">Please Change your password</h2>
+			    <h2 class="text-center" style="color: #000;">Please Change your password</h2>
 			  </div>
 			  <!-- <div class="login-gap"></div> -->
 			  <?php if(isset($info)){ ?>
@@ -37,7 +55,7 @@ include("include/login_header.php");
 			  <div class="form-group">
 			    <input type="password" class="form-control" placeholder="Retype Password" name="re_password" required/>
 			  </div>
-			  <button type="submit" name="change_password_btn" class="btn btn-default pull-right">Change Password</button>
+			  <button type="submit" name="change_password_btn" class="btn btn-primary pull-right">Change Password</button>
 			</form>
 		</div>
 	</div>
@@ -49,3 +67,8 @@ include("include/login_header.php");
 include("include/footer.php");
 
 ?>
+
+
+</body>
+</html>
+

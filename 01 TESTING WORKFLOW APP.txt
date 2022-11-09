@@ -3,16 +3,16 @@
 **Admin Login Details**
 
 Username: admin
-Password: codeastro
+Password: admin101
 
 **User Login Details** 
 
-Username: user1
-Password: password
+Username: jane
+Password: jane123
 
-Username: user2
-Password: password
+Username: logan
+Password: logan321
 
 NOTE: after creating new account for the users, you'll get a random generated
 temporary password which is provided inside "Manage User" section of the application.
-Copy that Temp Password and use it for the user's login.
+Copy that Temp Password and use it for the user's login to reset it to user's preference.
