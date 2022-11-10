@@ -53,7 +53,7 @@ class Admin_Class
           		if($userRow['temp_password'] == null){
 	                header('Location: task-info.php');
           		}else{
-          			header('Location: changePasswordForEmployee.php');
+          			header('Location: changePasswordForUser.php');
           		}
                 
              
@@ -71,7 +71,7 @@ class Admin_Class
 
 
 
-    public function change_password_for_employee($data){
+    public function change_password_for_user($data){
     	$password  = $this->test_form_input_data($data['password']);
 		$re_password = $this->test_form_input_data($data['re_password']);
 
@@ -232,12 +232,12 @@ class Admin_Class
 /* ------update_user_password------------------*/
 	
 	public function update_user_password($data, $id){
-		$employee_password  = $this->test_form_input_data(md5($data['employee_password']));
+		$user_password  = $this->test_form_input_data(md5($data['user_password']));
 		
 		try{
 			$update_user_password = $this->db->prepare("UPDATE tbl_admin SET password = :x WHERE user_id = :id ");
 
-			$update_user_password->bindparam(':x', $employee_password);
+			$update_user_password->bindparam(':x', $user_password);
 			$update_user_password->bindparam(':id', $id);
 			
 			$update_user_password->execute();

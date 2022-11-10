@@ -28,7 +28,7 @@ if(isset($_SESSION['admin_id'])){
 }
 
 if(isset($_POST['change_password_btn'])){
- $info = $obj_admin->change_password_for_employee($_POST);
+ $info = $obj_admin->change_password_for_user($_POST);
 }
 
 $page_name="Login";

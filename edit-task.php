@@ -48,7 +48,7 @@ $row = $info->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
-<!--modal for employee add-->
+<!--model for user add-->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
