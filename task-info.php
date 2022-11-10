@@ -209,10 +209,12 @@ include("include/sidebar.php");
                     } ?>
                     
                   </td>
+                  <!-- love -->
   
                  <td><a title="Update Task"  href="edit-task.php?task_id=<?php echo $row['task_id'];?>"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;
                   <a title="View" href="task-details.php?task_id=<?php echo $row['task_id']; ?>"><span class="glyphicon glyphicon-folder-open"></span></a>&nbsp;&nbsp;
                   <?php if($user_role == 1){ ?>
+                  <a title="Notification"  href="emailSend.php"><span class="glyphicon glyphicon-bell"></span></a>&nbsp;&nbsp;
                   <a title="Delete" href="?delete_task=delete_task&task_id=<?php echo $row['task_id']; ?>" onclick=" return check_delete();"><span class="glyphicon glyphicon-trash"></span></a></td>
                 <?php } ?>
                 </tr>
