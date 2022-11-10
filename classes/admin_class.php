@@ -383,8 +383,8 @@ class Admin_Class
 
 	/* =================Attendance Related===================== */
 	public function add_punch_in($data){
-		// data insert 
-		$date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
+		// data insert  
+		$date = new DateTime('now', new DateTimeZone('Africa/Johannesburg'));
  		
 		$user_id  = $this->test_form_input_data($data['user_id']);
 		$punch_in_time = $date->format('d-m-Y H:i:s');
@@ -401,8 +401,8 @@ class Admin_Class
 	}
 
 
-	public function add_punch_out($data){
-		$date = new DateTime('now', new DateTimeZone('Asia/Dhaka'));
+	public function add_punch_out($data){ 
+		$date = new DateTime('now', new DateTimeZone('Africa/Johannesburg'));
 		$punch_out_time = $date->format('d-m-Y H:i:s');
 		$punch_in_time  = $this->test_form_input_data($data['punch_in_time']);
 
