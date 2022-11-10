@@ -103,7 +103,7 @@ include("include/sidebar.php");
                         $info = $obj_admin->manage_all_info($sql);   
                       ?>
                       <select class="form-control" name="assign_to" id="aassign_to" required>
-                        <option value="">Select Employee...</option>
+                        <option value="">Select User...</option>
 
                         <?php while($row = $info->fetch(PDO::FETCH_ASSOC)){ ?>
                         <option value="<?php echo $row['user_id']; ?>"><?php echo $row['fullname']; ?></option>

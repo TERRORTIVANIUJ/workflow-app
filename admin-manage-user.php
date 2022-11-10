@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administration</title>
+  <title>Manage Administration</title>
 </head>
 <body>
 
@@ -53,7 +53,7 @@ if(isset($_GET['delete_user'])){
 $page_name="Admin";
 include("include/sidebar.php");
 
-if(isset($_POST['add_new_employee'])){
+if(isset($_POST['add_user'])){
   $error = $obj_admin->add_new_user($_POST);
 }
 
@@ -107,7 +107,7 @@ if(isset($_POST['add_new_employee'])){
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-3">
-                      <button type="submit" name="add_new_employee" class="btn btn-success-custom">Add User</button>
+                      <button type="submit" name="add_user" class="btn btn-success-custom">Add User</button>
                     </div>
                     <div class="col-sm-3">
                       <button type="submit" class="btn btn-danger-custom" data-dismiss="modal">Cancel</button>
@@ -180,7 +180,7 @@ if(isset($_POST['add_new_employee'])){
                   <td><?php echo $row['username']; ?></td>
                   <td><?php echo $row['temp_password']; ?></td>
                   
-                  <td><a title="Update Employee" href="update-employee.php?admin_id=<?php echo $row['user_id']; ?>"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;<a title="Delete" href="?delete_user=delete_user&admin_id=<?php echo $row['user_id']; ?>" onclick=" return check_delete();"><span class="glyphicon glyphicon-trash"></span></a></td>
+                  <td><a title="Update User" href="update-user.php?admin_id=<?php echo $row['user_id']; ?>"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;<a title="Delete" href="?delete_user=delete_user&admin_id=<?php echo $row['user_id']; ?>" onclick=" return check_delete();"><span class="glyphicon glyphicon-trash"></span></a></td>
                 </tr>
                 
               <?php  } ?>

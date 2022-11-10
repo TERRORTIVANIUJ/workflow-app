@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Change Password</title>
+	<title>Create Password</title>
 </head>
 <body>
 
@@ -28,7 +28,7 @@ if(isset($_SESSION['admin_id'])){
 }
 
 if(isset($_POST['change_password_btn'])){
- $info = $obj_admin->change_password_for_employee($_POST);
+ $info = $obj_admin->change_password_for_user($_POST);
 }
 
 $page_name="Login";

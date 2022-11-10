@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Update</title>
+  <title>Admin Update</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@ if ($user_id == NULL || $security_key == NULL) {
 
 $admin_id = $_GET['admin_id'];
 
-if(isset($_POST['update_current_employee'])){
+if(isset($_POST['update_current_user'])){
     $obj_admin->update_admin_data($_POST,$admin_id);
 }
 
@@ -54,7 +54,7 @@ include("include/sidebar.php");
         <div class="well well-custom">
           <ul class="nav nav-tabs nav-justified nav-tabs-custom">
             <li><a href="manage-admin.php">Manage Admin</a></li>
-            <li><a href="admin-manage-user.php">Manage Employee</a></li>
+            <li><a href="admin-manage-user.php">Manage User</a></li>
           </ul>
           <div class="gap"></div>
 
@@ -70,20 +70,20 @@ include("include/sidebar.php");
                             <div class="form-group">
                               <label class="control-label col-sm-2">Fullname</label>
                               <div class="col-sm-8">
-                                <input type="text" value="<?php echo $row['fullname']; ?>" placeholder="Enter Employee Name" name="em_fullname" list="expense" class="form-control input-custom" id="default" required>
+                                <input type="text" value="<?php echo $row['fullname']; ?>" placeholder="Enter User's Name" name="em_fullname" list="expense" class="form-control input-custom" id="default" required>
                               </div>
                             </div>
                             
                             <div class="form-group">
                               <label class="control-label col-sm-2">Username</label>
                               <div class="col-sm-8">
-                                <input type="text" value="<?php echo $row['username']; ?>" placeholder="Enter Employee username" name="em_username" class="form-control input-custom" required>
+                                <input type="text" value="<?php echo $row['username']; ?>" placeholder="Enter User's username" name="em_username" class="form-control input-custom" required>
                               </div>
                             </div>
                             <div class="form-group">
                               <label class="control-label col-sm-2">Email</label>
                               <div class="col-sm-8">
-                                <input type="email" value="<?php echo $row['email']; ?>" placeholder="Enter Employee Email" name="em_email" class="form-control input-custom" required>
+                                <input type="email" value="<?php echo $row['email']; ?>" placeholder="Enter User's Email" name="em_email" class="form-control input-custom" required>
                               </div>
                             </div>
                       
@@ -91,7 +91,7 @@ include("include/sidebar.php");
                             </div>
                             <div class="form-group">
                               <div class="col-sm-offset-4 col-sm-3">
-                                <button type="submit" name="update_current_employee" class="btn btn-success-custom">Update Now</button>
+                                <button type="submit" name="update_current_user" class="btn btn-success-custom">Update Now</button>
                               </div>
                             </div>
                           </form> 
